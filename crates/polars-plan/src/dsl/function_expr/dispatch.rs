@@ -136,7 +136,6 @@ pub(super) fn replace(s: &[Series], return_dtype: Option<DataType>) -> PolarsRes
     polars_ops::series::replace(&s[0], &s[1], &s[2], default, return_dtype)
 }
 
-#[cfg(feature = "negate")]
 pub(super) fn negate(s: &Series) -> PolarsResult<Series> {
     polars_ops::series::negate(s)
 }
